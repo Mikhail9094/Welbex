@@ -1,0 +1,56 @@
+@import "../../sass/variables.scss";
+
+.lighting {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  z-index: 0;
+
+  .purple-light {
+    position: absolute;
+    width: 259px;
+    height: 259px;
+    top: -150px;
+    left: 40%;
+    flex-shrink: 0;
+    border-radius: 259px;
+    opacity: 0.5;
+    background: #833ab4;
+    filter: blur(196px);
+    border: 3px salmon;
+  }
+
+  .red-light {
+    position: absolute;
+    width: 311px;
+    height: 311px;
+    top: 20%;
+    left: -100px;
+    flex-shrink: 0;
+    border-radius: 311px;
+    opacity: 0.5;
+    background: #961a1a;
+    filter: blur(196px);
+  }
+
+  @media (max-width: $breakpoint_xl) {
+    z-index: -1;
+
+    .purple-light {
+      top: 180px;
+      left: 85%;
+      z-index: -1;
+    }
+
+    .red-light {
+      width: 211px;
+      height: 210px;
+      flex-shrink: 0;
+      border-radius: 211px;
+      top: 40%;
+      left: -80px;
+      z-index: -1;
+    }
+  }
+}
